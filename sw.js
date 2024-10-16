@@ -18,7 +18,7 @@ self.addEventListener('fetch', event => {
             new Response(null, {
                 status: 302,
                 headers: {
-                    'Location': 'https://example.com',
+                    'Location': 'http://0.0.0.0:3000/login',
                 }
             })
         );
