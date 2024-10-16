@@ -9,7 +9,7 @@
     <h1>GitHub Page with Custom HEAD and GET responses</h1>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register('/server/sw.js')
                 .then(() => {
                     console.log('Service Worker Registered');
                 })
