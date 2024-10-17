@@ -1,18 +1,11 @@
-from flask import Flask, redirect, make_response
-
+from flask import Flask, Response, request, redirect
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'HEAD'])
-def handle_request():
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch(path):
     if request.method == 'HEAD':
-        # Create a response for HEAD request
-        response = make_response()
-        response.headers['Content-Type'] = 'text/x-component'
-        return response
-
-    if request.method == 'GET':
-        # Redirect for GET request
-        return redirect("https://example.com", code=302)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+        resp = Response("")
+        resp.headers['Content-Type'] = 'text/x-component'
+        return resp
+    return redirect('https://example.com')
