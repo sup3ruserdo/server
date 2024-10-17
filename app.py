@@ -8,4 +8,4 @@ def catch(path):
         resp = Response("")
         resp.headers['Content-Type'] = 'text/x-component'
         return resp
-    return redirect('https://example.com')
+    return redirect('http://0.0.0.0:3000')
