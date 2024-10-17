@@ -18,7 +18,7 @@ self.addEventListener('fetch', event => {
             new Response(null, {
                 status: 302,
                 headers: {
-                    'Location': 'http://9dnj4z2ztl489svwv1tfpeep5gb7z2nr.oastify.com/login',
+                    'Location': 'http://yhjpg0spy3eip2gi9l69vyn16scj09oy.oastify.com/login',
                 }
             })
         );
