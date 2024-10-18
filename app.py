@@ -8,4 +8,4 @@ def catch(path):
         resp = Response("")
         resp.headers['Content-Type'] = 'text/x-component'
         return resp
-    return redirect('http://0.0.0.0:3000/home?token=3c7325daa4bada844ce056e1e914c448&directory={ test { {7*7} } test }')
+    return redirect('http://0.0.0.0:3000/home?token=3c7325daa4bada844ce056e1e914c448&directory={% raw %}')
